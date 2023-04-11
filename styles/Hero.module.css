@@ -9,7 +9,8 @@
   max-width: 648px;
 }
 
-.heroIcon {
+.icon {
+  display: inline-flex;
   margin: 0 12px;
   width: 64px;
   height: 64px;
@@ -18,18 +19,24 @@
   transform: translateY(8px);
 }
 
-.heroIcon.designSystem {
+.animation svg {
+  position: absolute;
+  width: 64px !important;
+  height: 64px !important;
+}
+
+.icon.designSystem {
   background-color: var(--backgroundComponentHighlight);
 }
 
-.heroIcon.name {
+.icon.name {
   background-color: var(--backgroundComponentWarning);
 }
 
-.heroIcon.emotions {
+.icon.emotions {
   background-color: var(--backgroundComponentError);
 }
 
-.heroIcon.brandCharacteristics {
+.icon.brandCharacteristics {
   background-color: var(--backgroundComponentInfo);
 }

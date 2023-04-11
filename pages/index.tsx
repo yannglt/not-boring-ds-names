@@ -1,7 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { useRef, useState } from "react";
+import Head from "next/head"
+// import Image from "next/image"
+import { useState } from "react";
+
 import Header from "../components/Header";
+import Animation from "../components/Animation";
+
 import hero from "../styles/Hero.module.css";
 import form from "../styles/Form.module.css";
 
@@ -72,9 +75,10 @@ export default function Home() {
       <main>
         <Header />
         <div className={hero.hero}>
-          <p className="heading-1 text-high-emphasis">Empower your design system<img src="/images/designSystem.svg" className={hero.heroIcon + " " + hero.designSystem}/>with a memorable name<img src="/images/name.svg" className={hero.heroIcon + " " + hero.name}/>that conveys emotions<img src="/images/emotions.svg" className={hero.heroIcon + " " + hero.emotions}/>, and extends your brand characteristics<img src="/images/brandCharacteristics.svg" className={hero.heroIcon + " " + hero.brandCharacteristics}/>.</p>
+          <p className="heading-1 text-high-emphasis">Empower your design system<span className={hero.icon + " " + hero.designSystem}><Animation path="design-system.json" className={hero.animation}/></span>with a memorable name<span className={hero.icon + " " + hero.name}><Animation path="name.json" className={hero.animation}/></span>that conveys emotions<span className={hero.icon + " " + hero.emotions}><Animation path="emotions.json" className={hero.animation}/></span>, and extends your brand characteristics<span className={hero.icon + " " + hero.brandCharacteristics}><Animation path="brand-characteristics.json" className={hero.animation}/></span>.</p>
           <p className="body-1-s text-low-emphasis">Your design system is the backbone of your brand's visual identity, but a great name can take it to the next level. With the power of AI, we'll help you generate a name that captures your brand's unique characteristics, industry, and personality.</p>
         </div>
+
         <div className={form.container}>
           <form className={form.form} onSubmit={generateName}>
             <div className={form.group}>
