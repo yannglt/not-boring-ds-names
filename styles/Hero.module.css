@@ -1,0 +1,35 @@
+.hero {
+  margin: 48px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero p+p {
+  max-width: 648px;
+}
+
+.heroIcon {
+  margin: 0 12px;
+  width: 64px;
+  height: 64px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transform: translateY(8px);
+}
+
+.heroIcon.designSystem {
+  background-color: var(--backgroundComponentHighlight);
+}
+
+.heroIcon.name {
+  background-color: var(--backgroundComponentWarning);
+}
+
+.heroIcon.emotions {
+  background-color: var(--backgroundComponentError);
+}
+
+.heroIcon.brandCharacteristics {
+  background-color: var(--backgroundComponentInfo);
+}

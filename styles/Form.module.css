@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  border: 1px solid var(--borderLowEmphasis);
+  border-radius: 6px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border-bottom: 1px solid var(--borderLowEmphasis);
+}
+
+@media (min-width: 896px) {
+  .form {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.group {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.group select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--iconDefault) 50%),
+    linear-gradient(135deg, var(--iconDefault) 50%, transparent 50%);
+  /* linear-gradient(to right, #ccc, #ccc); */
+  background-position:
+    calc(100% - 20px) calc(1em + 3px),
+    calc(100% - 15px) calc(1em + 3px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    6px 6px,
+    6px 6px;
+  background-repeat: no-repeat;
+}
+
+.group input, .group select {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--borderLowEmphasis);
+  box-shadow: var(--shadowInputDefault);
+  background-color: var(--backgroundComponentParent);
+  appearance: none;
+  transition: box-shadow 100ms ease-out;
+}
+
+.group input:hover, .group select:hover {
+  box-shadow: var(--shadowInputHover);
+}
+
+.group input:focus, .group select:focus {
+  outline: none;
+}
+
+.group input::placeholder {
+  color: var(--textLowEmphasis);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 0 64px 64px 64px;
+}
