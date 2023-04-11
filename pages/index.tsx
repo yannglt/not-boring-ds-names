@@ -76,7 +76,7 @@ export default function Home() {
         <Header />
         <div className={hero.hero}>
           <p className="heading-1 text-high-emphasis">Empower your design system<span className={hero.icon + " " + hero.designSystem}><Animation path="design-system.json" className={hero.animation}/></span>with a memorable name<span className={hero.icon + " " + hero.name}><Animation path="name.json" className={hero.animation}/></span>that conveys emotions<span className={hero.icon + " " + hero.emotions}><Animation path="emotions.json" className={hero.animation}/></span>, and extends your brand characteristics<span className={hero.icon + " " + hero.brandCharacteristics}><Animation path="brand-characteristics.json" className={hero.animation}/></span>.</p>
-          <p className="body-1-s text-low-emphasis">Your design system is the backbone of your brand's visual identity, but a great name can take it to the next level. With the power of AI, we'll help you generate a name that captures your brand's unique characteristics, industry, and personality.</p>
+          <p className="body-1-s text-low-emphasis">Your design system is the backbone of your brand's visual identity, but a great name can take it to the next level. With the power of GPT-3, we'll help you generate a name that captures your brand's unique characteristics, industry, and personality.</p>
         </div>
 
         <div className={form.container}>
