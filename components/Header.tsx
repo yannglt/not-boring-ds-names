@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Header.module.css";
 
@@ -17,8 +18,12 @@ export default function Header() {
         {/* <img className={styles.logo} src="/images/specify-logo.svg"/> */}
       </div>
       <ul className={styles.list}>
-        <li className={styles.listItem}><a href="/" className="body-2-m text-medium-emphasis">Index</a></li>
-        <li className={styles.listItem}><a href="/about" className="body-2-m text-medium-emphasis">About</a></li>
+        <li className={styles.listItem}>
+          <Link href="/" className="body-2-m text-medium-emphasis">Index</Link>
+        </li>
+        <li className={styles.listItem}>
+          <Link href="/" className="body-2-m text-medium-emphasis">About</Link>
+        </li>
       </ul>
     </header>
   );

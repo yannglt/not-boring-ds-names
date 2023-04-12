@@ -67,6 +67,10 @@
   outline: var(--borderFocus) solid 2px;
 }
 
+.group input::selection, .group select::selection { 
+  background-color: transparent
+}
+
 .group input::placeholder {
   color: var(--textLowEmphasis);
 }

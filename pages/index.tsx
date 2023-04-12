@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Link from "next/link";
 // import Image from "next/image"
 import { useState } from "react";
 
@@ -23,7 +24,7 @@ export default function Home() {
     The name should :
     - be one word only and different that the brand name itself;
     - fits in the ${space} industry, reflects ${brandCharacteristics} brand characteristics. 
-    - not contains the term "x", "design system" or "design" in it.
+    - not contains quotes or the terms "x", "design system" or "design" in it.
     
     Here are some examples of some well-know design systems: Material (Google), Fluent (Microsoft), Carbon (IBM), Polaris (Shopify), and Spectrum (Adobe).
   `;
@@ -72,11 +73,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className={loading ? "loading" : ""}>
         <Header />
         <div className={hero.hero}>
           <p className="heading-1 text-high-emphasis">Empower your design system<span className={hero.icon + " " + hero.designSystem}><Animation path="design-system.json" className={hero.animation}/></span>with a memorable name<span className={hero.icon + " " + hero.name}><Animation path="name.json" className={hero.animation}/></span>that conveys emotions<span className={hero.icon + " " + hero.emotions}><Animation path="emotions.json" className={hero.animation}/></span>, and extends your brand characteristics<span className={hero.icon + " " + hero.brandCharacteristics}><Animation path="brand-characteristics.json" className={hero.animation}/></span>.</p>
-          <p className="body-1-s text-low-emphasis">Your design system is the backbone of your brand's visual identity, but a great name can take it to the next level. With the power of GPT-3, we'll help you generate a name that captures your brand's unique characteristics, industry, and personality.</p>
+          <p className="body-1-s text-low-emphasis">Your design system is the backbone of your brand&apos;s visual identity, but a great name can take it to the next level. With the power of GPT-3, we&apos;ll help you generate a name that captures your brand&apos;s unique characteristics, industry, and personality.</p>
         </div>
 
         <div className={form.container}>
@@ -124,7 +125,7 @@ export default function Home() {
 
             {/* { result             
               ? <p className="body-emphasis text-low-emphasis">{result.explanation}</p>
-              : <p className="body-emphasis text-low-emphasis">You'll find the perfect description for your design system</p>           
+              : <p className="body-emphasis text-low-emphasis">You&apos;ll find the perfect description for your design system</p>           
             } */}
           </div>
         </div>

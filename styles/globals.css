@@ -83,6 +83,10 @@ body {
   }
 }
 
+main.loading {
+  cursor: wait;
+}
+
 .text-high-emphasis {
   color: var(--textHighEmphasis);
 }
