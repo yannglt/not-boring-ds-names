@@ -172,6 +172,10 @@ main.loading {
   transition: background-color 100ms ease-out;
 }
 
+.button-primary svg {
+  margin-left: 8px;
+}
+
 .button-primary:hover {
   background-color: var(--buttonPrimaryBackgroundHover);
 }
