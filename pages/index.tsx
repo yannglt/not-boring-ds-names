@@ -72,8 +72,11 @@ export default function Home() {
     }
 
     if (done) {
+      console.log(generatedName)
       setDisplayedName(generatedName.split("%")[0]);
+      console.log(displayedName);
       setDisplayedExplanation(generatedName.split("%")[1]);
+      console.log(displayedExplanation);
     }
 
     setLoading(false);

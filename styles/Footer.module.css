@@ -2,12 +2,14 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   padding: 24px 0;
   border-top: 1px solid var(--borderLowEmphasis);
 }
 
 .list {
   display: flex;
+  align-items: center;
   gap: 24px;
 }
 

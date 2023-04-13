@@ -2,13 +2,14 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   padding: 24px 0;
   border-bottom: 1px solid var(--borderLowEmphasis);
 }
 
 .title {
   display: flex;
-  align-items: top;
+  align-items: center;
   gap: 6px;
 }
 
@@ -17,7 +18,7 @@
 }
 
 .title img {
-  transform: translateY(-1px);
+  transform: translateY(2px);
 }
 
 .logo {
