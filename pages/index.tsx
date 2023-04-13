@@ -1,10 +1,8 @@
 import Head from "next/head"
-import Link from "next/link";
-// import Image from "next/image"
 import { useState } from "react";
 
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import Animation from "../components/Animation";
 
 import hero from "../styles/Hero.module.css";
@@ -15,7 +13,6 @@ export default function Home() {
   const [companyName, setCompanyName] = useState("");
   const [brandCharacteristics, setBrandCharacteristics] = useState("");
   const [space, setSpace] = useState("");
-  const [generatedName, setGeneratedName] = useState("");
   const [displayedName, setDisplayedName] = useState("");
   const [displayedExplanation, setDisplayedExplanation] = useState("");
 
@@ -39,7 +36,6 @@ export default function Home() {
 
   const generateName = async (e: any) => {
     e.preventDefault();
-    setGeneratedName("");
     setLoading(true);
     const response = await fetch("/api/generate", {
       method: "POST",
@@ -64,19 +60,20 @@ export default function Home() {
     const decoder = new TextDecoder();
     let done = false;
 
+    const resultChunked = [];
+
     while (!done) {
       const { value, done: doneReading } = await reader.read();
       done = doneReading;
-      const chunkValue = decoder.decode(value);
-      setGeneratedName((prev) => prev + chunkValue);
+      const chunkValue = decoder.decode(value);     
+      resultChunked.push(chunkValue)
     }
 
+    const [ displayedName, displayedExplanation ] = resultChunked.join("").split("%");
+
     if (done) {
-      console.log(generatedName)
-      setDisplayedName(generatedName.split("%")[0]);
-      console.log(displayedName);
-      setDisplayedExplanation(generatedName.split("%")[1]);
-      console.log(displayedExplanation);
+      setDisplayedName(displayedName);
+      setDisplayedExplanation(displayedExplanation);
     }
 
     setLoading(false);
@@ -153,7 +150,7 @@ export default function Home() {
             </div>
           </div>
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   )
