@@ -2,7 +2,7 @@ import Head from "next/head"
 import { useState } from "react";
 
 import Header from "../components/Header";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 import Animation from "../components/Animation";
 
 import hero from "../styles/Hero.module.css";
@@ -150,7 +150,7 @@ export default function Home() {
             </div>
           </div>
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   )
