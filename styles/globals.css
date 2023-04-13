@@ -65,9 +65,6 @@ a {
 body {
   margin: 0 auto;
   padding: 0 24px;
-  /* Remove this before deployment */
-  margin-bottom: 256px;
-  /*  */
   max-width: 1128px;
 
   font-family: 'Inter', sans-serif;
@@ -81,6 +78,16 @@ body {
   body {
     padding: 0 48px;
   }
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }
 
 main.loading {

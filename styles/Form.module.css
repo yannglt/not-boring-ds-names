@@ -4,6 +4,7 @@
   gap: 64px;
   border: 1px solid var(--borderLowEmphasis);
   border-radius: 6px;
+  margin-bottom: 96px;
 }
 
 .form {

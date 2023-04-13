@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 24px 0;
+  border-top: 1px solid var(--borderLowEmphasis);
+}
+
+.list {
+  display: flex;
+  gap: 24px;
+}
+
+.listItem {
+  list-style: none;
+  display: inline-flex;
+}
+
+.technologies {
+  display: inline-block;
+}
+
+.technologies a {
+  display: inline-flex;
+}
+
+.listItem svg path {
+  fill: var(--iconDefault);
+}
