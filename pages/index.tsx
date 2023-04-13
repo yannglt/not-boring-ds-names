@@ -15,18 +15,25 @@ export default function Home() {
   const [brandCharacteristics, setBrandCharacteristics] = useState("");
   const [space, setSpace] = useState("");
   const [generatedName, setGeneratedName] = useState("");
+  const [displayedName, setDisplayedName] = useState("");
+  const [displayedExplanation, setDisplayedExplanation] = useState("");
 
   const prompt = `
-    A design system is a collection of reusable design components, guidelines, and standards that are used to create consistent and cohesive user interfaces across different products or platforms. It helps designers and developers work more efficiently and ensures a consistent brand identity and user experience. 
-    
-    Suggest me a name for the design system of ${companyName}. 
-    
+    A design system is a collection of reusable design components, guidelines, and standards that are used to create consistent and cohesive user interfaces across different products or platforms. It helps designers and developers work more efficiently and ensures a consistent brand identity and user experience.
+
+    Suggest me a name for the design system of ${companyName}.
+
     The name should :
     - be one word only and different that the brand name itself;
-    - fits in the ${space} industry, reflects ${brandCharacteristics} brand characteristics. 
+    - fits in the ${space} industry, reflects the following brand characteristics: ${brandCharacteristics}.
     - not contains quotes or the terms "x", "design system" or "design" in it.
-    
+
     Here are some examples of some well-know design systems: Material (Google), Fluent (Microsoft), Carbon (IBM), Polaris (Shopify), and Spectrum (Adobe).
+
+    Then, write an explanation for this generated name shorter than 280 characters. It should explain why this name is a good fit for the design system of ${companyName}.
+    Add a "%" prefix to your explanation.
+
+    Your whole answer should have the following format: [NAME]%[EXPLANATION]
   `;
 
   const generateName = async (e: any) => {
@@ -62,6 +69,12 @@ export default function Home() {
       const chunkValue = decoder.decode(value);
       setGeneratedName((prev) => prev + chunkValue);
     }
+
+    if (done) {
+      setDisplayedName(generatedName.split("%")[0]);
+      setDisplayedExplanation(generatedName.split("%")[1]);
+    }
+
     setLoading(false);
   };
 
@@ -76,7 +89,7 @@ export default function Home() {
       <main className={loading ? "loading" : ""}>
         <Header />
         <div className={hero.hero}>
-          <p className="heading-1 text-high-emphasis">Empower your design system<span className={hero.icon + " " + hero.designSystem}><Animation path="design-system.json" className={hero.animation}/></span>with a memorable name<span className={hero.icon + " " + hero.name}><Animation path="name.json" className={hero.animation}/></span>that conveys emotions<span className={hero.icon + " " + hero.emotions}><Animation path="emotions.json" className={hero.animation}/></span>, and extends your brand characteristics<span className={hero.icon + " " + hero.brandCharacteristics}><Animation path="brand-characteristics.json" className={hero.animation}/></span>.</p>
+          <p className="heading-1 text-high-emphasis">Empower your design system<span className={hero.icon + " " + hero.designSystem}><Animation path="design-system.json" className={hero.animation} /></span>with a memorable name<span className={hero.icon + " " + hero.name}><Animation path="name.json" className={hero.animation} /></span>that conveys emotions<span className={hero.icon + " " + hero.emotions}><Animation path="emotions.json" className={hero.animation} /></span>, and extends your brand characteristics<span className={hero.icon + " " + hero.brandCharacteristics}><Animation path="brand-characteristics.json" className={hero.animation} /></span>.</p>
           <p className="body-1-s text-low-emphasis">Your design system is the backbone of your brand&apos;s visual identity, but a great name can take it to the next level. With the power of GPT-3, we&apos;ll help you generate a name that captures your brand&apos;s unique characteristics, industry, and personality.</p>
         </div>
 
@@ -118,15 +131,15 @@ export default function Home() {
             <button className="button-primary" type="submit" disabled={loading}>Generate a name</button>
           </form>
           <div className={form.result}>
-            { generatedName && !loading 
-              ? <p className="display-1 text-high-emphasis text-result">{generatedName.replace(".", "")} <br/>Design System</p>
-              : <p className="display-1 text-low-emphasis text-disabled">Your design system name</p>            
+            {displayedName && !loading
+              ? <p className="display-1 text-high-emphasis text-result">{displayedName}<br />Design System</p>
+              : <p className="display-1 text-low-emphasis text-disabled">Your design system name</p>
             }
 
-            {/* { result             
-              ? <p className="body-emphasis text-low-emphasis">{result.explanation}</p>
-              : <p className="body-emphasis text-low-emphasis">You&apos;ll find the perfect description for your design system</p>           
-            } */}
+            {displayedExplanation && !loading
+              ? <p className="body-emphasis text-low-emphasis">{displayedExplanation}</p>
+              : <p className="body-emphasis text-low-emphasis">You&apos;ll find the perfect description for your design system</p>
+            }
           </div>
         </div>
         {/* <button onClick={(e) => generateName(e)}>Generate your name &rarr;</button>
