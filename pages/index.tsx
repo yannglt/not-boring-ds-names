@@ -15,6 +15,7 @@ export default function Home() {
   const [space, setSpace] = useState("");
   const [displayedName, setDisplayedName] = useState("");
   const [displayedExplanation, setDisplayedExplanation] = useState("");
+  const [completion, setCompletion] = useState(0);
 
   const prompt = `
     A design system is a collection of reusable design components, guidelines, and standards that are used to create consistent and cohesive user interfaces across different products or platforms. It helps designers and developers work more efficiently and ensures a consistent brand identity and user experience.
@@ -67,6 +68,12 @@ export default function Home() {
       done = doneReading;
       const chunkValue = decoder.decode(value);     
       resultChunked.push(chunkValue)
+
+      if (completion < 1) {
+        setCompletion(resultChunked.length / 50);
+      } else {
+        setCompletion(1);
+      }
     }
 
     const [ displayedName, displayedExplanation ] = resultChunked.join("").split("%");
@@ -123,6 +130,7 @@ export default function Home() {
                   <option value="media">Media</option>
                   <option value="real-estate">Real Estate</option>
                   <option value="retail">Retail</option>
+                  <option value="sport">Sport</option>
                   <option value="technology">Technology</option>
                   <option value="telecommunications">Telecommunications</option>
                   <option value="transportation">Transportation</option>
@@ -138,6 +146,9 @@ export default function Home() {
               </button>
             </form>
             <div className={form.result}>
+              {/* <div className={form.loading}>
+                <div className={form.progress} style={{ transform: "scaleX(" + completion + ")" }} ></div>
+              </div> */}
               {displayedName && !loading
                 ? <p className="display-1 text-high-emphasis text-result">{displayedName}<br />Design System</p>
                 : <p className="display-1 text-low-emphasis text-disabled">Your design system name</p>

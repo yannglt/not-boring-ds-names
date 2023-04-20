@@ -15,11 +15,12 @@ a {
   --textMediumEmphasis: #323B48;
   --textLowEmphasis: #788BA5;
   --textOnColoredBackground: #FFFFFF;
+  --textInfo: #117DF9;
   --iconDefault: #788BA5;
   --iconOnColoredBackground: #FFFFFF;
   --backgroundSurface1: #FFFFFF;
   --backgroundSurface2: #F6F8FB;
-  --backgroundComponentParent: #FFFFFF;
+  --backgroundComponentParent: #FFFFFF;--backgroundComponentChild: #F6F8FB;
   --backgroundComponentHighlight: #E7E4FB;
   --backgroundComponentInfo: #DBECFE;
   --backgroundComponentError: #FEE4E2;
@@ -33,6 +34,10 @@ a {
   --buttonPrimaryBackgroundHover: #4938C3;
   --buttonPrimaryBackgroundActive: #8A78EE;
   --buttonPrimaryBorderDefault: #4938C3;
+  --specifyLogo: url("/images/specify-logo-light.svg");
+  --specifyLogoFlower: url("/images/specify-logo-flower-light.svg");
+  --openaiLogo: url("/images/openai-logo-light.svg");
+  --vercelLogo: url("/images/vercel-logo-light.svg");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,9 +46,11 @@ a {
     --textMediumEmphasis: #F4F5F5;
     --textLowEmphasis: #AEB2B7;
     --textOnColoredBackground: #FFFFFF;
+    --textInfo: #60A8FA;
     --iconDefault: #787E87;
     --iconOnColoredBackground: #FFFFFF;
     --backgroundComponentParent: #27282B;
+    --backgroundComponentChild: #313235;
     --backgroundComponentHighlight: #362A79;
     --backgroundComponentInfo: #293443;
     --backgroundComponentError: #3C2627;
@@ -59,6 +66,10 @@ a {
     --buttonPrimaryBackgroundHover: #9A90DF;
     --buttonPrimaryBackgroundActive: #5443BC;
     --buttonPrimaryBorderDefault: #5443BC;
+    --specifyLogo: url("/images/specify-logo-dark.svg");
+    --specifyLogoFlower: url("/images/specify-logo-flower-dark.svg");
+    --openaiLogo: url("/images/openai-logo-dark.svg");
+    --vercelLogo: url("/images/vercel-logo-dark.svg");
   }
 }
 
@@ -74,6 +85,17 @@ body {
   background-color: var(--backgroundSurface1);
 }
 
+html::before {
+  content: '';
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 512px;
+  background-image: linear-gradient(0deg, var(--backgroundSurface1), var(--backgroundSurface2));
+}
+
 @media (min-width: 896px) {
   body {
     padding: 0 48px;
@@ -85,11 +107,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-main {
-  flex-grow: 1;
-}
-
 main.loading {
   cursor: wait;
 }
@@ -104,6 +121,10 @@ main.loading {
 
 .text-low-emphasis {
   color: var(--textLowEmphasis);
+}
+
+.text-info {
+  color: var(--textInfo);
 }
 
 .text-disabled {
@@ -149,7 +170,7 @@ main.loading {
 .body-2-l {
   font-size: 14px;
   line-height: 20px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .body-2-m {

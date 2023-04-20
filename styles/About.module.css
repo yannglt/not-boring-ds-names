@@ -1,0 +1,103 @@
+.hero {
+  margin: 96px 0;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 24px;
+  margin-bottom: 96px;
+}
+
+.icon {
+  display: inline-flex;
+  margin: 0 12px;
+  width: 64px;
+  height: 64px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transform: translateY(8px);
+  background-size: 64px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon.specify {
+  background-image: var(--specifyLogoFlower);
+  background-color: var(--backgroundComponentHighlight);
+}
+
+.icon.openai {
+  background-image: var(--openaiLogo);
+  background-color: var(--backgroundComponentChild);
+}
+
+.icon.vercel {
+  background-image: var(--vercelLogo);
+  background-color: #000000;
+}
+
+.story {
+  margin-top: 20px;
+  grid-column: 1 / span 7;
+}
+
+.storyPart {
+  margin-bottom: 48px;
+}
+
+.storyPart p:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.story h2 {
+  margin-bottom: 8px;
+}
+
+.informations {
+  grid-column: 9 / span 4;
+  align-self: flex-start;
+  background-color: var(--backgroundComponentParent);
+  border: 1px solid var(--borderLowEmphasis);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 24px; 
+}
+
+.information:not(:last-child) {
+  border-bottom: 1px solid var(--borderLowEmphasis);
+}
+
+.makers {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stackTitle, .stackItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stackList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.logo {
+  width: 100%;
+  height: 96px;
+  background-color: var(--backgroundComponentChild);
+  border-radius: 6px;
+  background-image: var(--specifyLogo);
+  background-size: auto 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
