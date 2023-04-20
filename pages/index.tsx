@@ -1,5 +1,7 @@
 import Head from "next/head"
 import { useState } from "react";
+import { useDispatch } from 'react-redux';
+import { setName } from '../store/nameSlice';
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -16,6 +18,7 @@ export default function Home() {
   const [displayedName, setDisplayedName] = useState("");
   const [displayedExplanation, setDisplayedExplanation] = useState("");
   const [completion, setCompletion] = useState(0);
+  const dispatch = useDispatch();
 
   const prompt = `
     A design system is a collection of reusable design components, guidelines, and standards that are used to create consistent and cohesive user interfaces across different products or platforms. It helps designers and developers work more efficiently and ensures a consistent brand identity and user experience.
@@ -81,6 +84,7 @@ export default function Home() {
     if (done) {
       setDisplayedName(displayedName);
       setDisplayedExplanation(displayedExplanation);
+      dispatch(setName(displayedName));
     }
 
     setLoading(false);
