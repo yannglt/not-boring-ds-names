@@ -29,6 +29,7 @@ export default function Home() {
     - be one word only and different that the brand name itself;
     - fits in the ${space} industry, reflects the following brand characteristics: ${brandCharacteristics}.
     - not contains quotes or the terms "x", "design system" or "design" in it.
+    - should contains only letters, no hyphens, no dots, no brackets, no special characters.
 
     Here are some examples of some well-know design systems: Material (Google), Fluent (Microsoft), Carbon (IBM), Polaris (Shopify), and Spectrum (Adobe).
 
