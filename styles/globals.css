@@ -167,13 +167,13 @@ main.loading {
     font-size: 144px;
     line-height: 144px;
     letter-spacing: -6px;
-    min-height: calc(448px - 160 * ((100vw - 896px) / (1200 - 896)));
+    min-height: calc(448px - 148 * ((100vw - 896px) / (1200 - 896)));
   }
 }
 
 @media (min-width: 1200px) {
   .display-1 {
-    min-height: 288px;
+    min-height: 300px;
   }
 }
 
@@ -199,9 +199,16 @@ main.loading {
 }
 
 .body-emphasis {
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 400;
+}
+
+@media (min-width: 896px) {
+  .body-emphasis {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 
 .body-1-s {
