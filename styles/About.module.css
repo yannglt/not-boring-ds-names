@@ -15,7 +15,7 @@
   width: 64px;
   height: 64px;
   border-radius: 6px;
-  border: 1px solid transparent;
+  border: 0px solid transparent;
   transform: translateY(8px);
   background-size: 100%;
   background-repeat: no-repeat;

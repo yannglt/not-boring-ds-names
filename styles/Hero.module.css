@@ -1,8 +1,14 @@
 .hero {
-  margin: 96px 0;
+  margin: 48px 0 32px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+@media (min-width: 896px) {
+  .hero {
+    margin: 96px 0 64px;
+  }
 }
 
 .hero p+p {
@@ -11,18 +17,45 @@
 
 .icon {
   display: inline-flex;
-  margin: 0 12px;
-  width: 64px;
-  height: 64px;
+  margin: 0 8px;
+  width: 36px;
+  height: 36px;
   border-radius: 6px;
-  border: 1px solid transparent;
+  border: 0px solid transparent;
   transform: translateY(8px);
 }
 
 .animation svg {
   position: absolute;
-  width: 64px !important;
-  height: 64px !important;
+  width: 36px;
+  height: 36px;
+}
+
+@media (min-width: 414px) {
+  .icon {
+    width: calc(36px + 28 * ((100vw - 414px) / (896 - 414)));
+    height: calc(36px + 28 * ((100vw - 414px) / (896 - 414)));
+  }
+
+  .animation svg {
+    width: calc(36px + 28 * ((100vw - 414px) / (896 - 414)));
+    height: calc(36px + 28 * ((100vw - 414px) / (896 - 414)));
+  }
+}
+
+@media (min-width: 896px) {
+  .icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 12px;
+  }
+}
+
+@media (min-width: 896px) {
+  .animation svg {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .icon.designSystem {

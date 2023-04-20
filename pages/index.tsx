@@ -153,7 +153,7 @@ export default function Home() {
             <div className={form.result}>
               {displayedName && !loading
                 ? <p className="display-1 text-high-emphasis text-result">{displayedName}<br />Design System</p>
-                : <p className="display-1 text-low-emphasis text-disabled">Your design system name</p>
+                : <p className="display-1 text-low-emphasis text-disabled">Design system name</p>
               }
 
               {displayedExplanation && !loading
