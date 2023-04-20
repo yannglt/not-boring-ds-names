@@ -27,19 +27,19 @@
 
 .animation svg {
   position: absolute;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
 }
 
 @media (min-width: 414px) {
   .icon {
-    width: calc(36px + 28 * ((100vw - 414px) / (896 - 414)));
-    height: calc(36px + 28 * ((100vw - 414px) / (896 - 414)));
+    width: calc(32px + 32 * ((100vw - 414px) / (896 - 414)));
+    height: calc(32px + 32 * ((100vw - 414px) / (896 - 414)));
   }
 
   .animation svg {
-    width: calc(36px + 28 * ((100vw - 414px) / (896 - 414)));
-    height: calc(36px + 28 * ((100vw - 414px) / (896 - 414)));
+    width: calc(32px + 32 * ((100vw - 414px) / (896 - 414)));
+    height: calc(32px + 32 * ((100vw - 414px) / (896 - 414)));
   }
 }
 

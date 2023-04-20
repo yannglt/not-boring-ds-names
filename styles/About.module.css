@@ -29,8 +29,8 @@
 .icon {
   display: inline-flex;
   margin: 0 8px;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 6px;
   border: 0px solid transparent;
   transform: translateY(8px);
@@ -41,8 +41,8 @@
 
 @media (min-width: 414px) {
   .icon {
-    width: calc(36px + 28 * ((100vw - 414px) / (896 - 414)));
-    height: calc(36px + 28 * ((100vw - 414px) / (896 - 414)));
+    width: calc(32px + 32 * ((100vw - 414px) / (896 - 414)));
+    height: calc(32px + 32 * ((100vw - 414px) / (896 - 414)));
   }
 }
 
