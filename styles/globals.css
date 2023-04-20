@@ -69,10 +69,11 @@ a {
     --buttonPrimaryBackgroundDefault: #624DE3;
     --buttonPrimaryBackgroundHover: #9A90DF;
     --buttonPrimaryBackgroundActive: #5443BC;
-    --buttonPrimaryBorderDefault: #5443BC;--buttonSecondaryBackgroundDefault: #624DE3;
-    --buttonSecondaryBackgroundHover: #4938C3;
-    --buttonSecondaryBackgroundActive: #8A78EE;
-    --buttonSecondaryBorderDefault: #4938C3;
+    --buttonPrimaryBorderDefault: #5443BC;
+    --buttonSecondaryBackgroundDefault: #27282B;
+    --buttonSecondaryBackgroundHover: #313235;
+    --buttonSecondaryBackgroundActive: #1F2023;
+    --buttonSecondaryBorderDefault: #44474B;
     --specifyLogo: url("/images/specify-logo-dark.svg");
     --specifyLogoFlower: url("/images/specify-logo-flower-dark.svg");
     --openaiLogo: url("/images/openai-logo-dark.svg");
@@ -220,6 +221,10 @@ main.loading {
   border: 1px solid var(--buttonPrimaryBorderDefault);
 }
 
+.button-primary svg path {
+  fill: var(--iconOnColoredBackground);
+}
+
 .button-primary:hover {
   background-color: var(--buttonPrimaryBackgroundHover);
 }
@@ -241,6 +246,10 @@ main.loading {
   color: var(--textHighEmphasis);
   background-color: var(--buttonSecondaryBackgroundDefault);
   border: 1px solid var(--buttonSecondaryBorderDefault);
+}
+
+.button-secondary svg path {
+  fill: var(--iconDefault);
 }
 
 .button-secondary:hover {

@@ -17,7 +17,7 @@
   border-radius: 6px;
   border: 1px solid transparent;
   transform: translateY(8px);
-  background-size: 64px;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
