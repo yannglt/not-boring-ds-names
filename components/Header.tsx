@@ -6,7 +6,7 @@ import styles from "../styles/Header.module.css";
 
 export default function Header() {
   const name = useSelector((state: { name: { name: string } }) => state.name.name);
-  const [ websiteURL ] = useState("https://not-boring-ds-names.vercel.app");
+  const websiteURL = "https://not-boring-ds-names.vercel.app";
   const tweet = name ? name + " — generated Not Boring Design System Names, a fun way to find a name for your design system by @specifyapp💜%0A%0ACheck it out: " + websiteURL : "Not Boring Design System Names, a fun way to find a name for your design system by @specifyapp💜%0A%0ACheck it out: " + websiteURL;
 
   return (
