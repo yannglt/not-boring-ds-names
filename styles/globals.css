@@ -199,6 +199,7 @@ main.loading {
   line-height: 20px;
   border-radius: 6px;
   transition: background-color 100ms ease-out;
+  cursor: pointer;
 }
 
 .button-large {
@@ -234,8 +235,38 @@ main.loading {
 }
 
 .button-primary:disabled {
-  opacity: 0.4;
   cursor: wait;
+}
+
+.loading .button-primary svg path:first-child {
+  animation: meteorSmall 800ms ease-in-out infinite;
+  transform-origin: center;
+}
+
+.loading .button-primary svg path:last-child {
+  animation: meteorBig 800ms ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes meteorSmall {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes meteorBig {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .button-primary:disabled:hover {
