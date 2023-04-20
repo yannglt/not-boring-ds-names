@@ -1,7 +1,12 @@
 import Link from "next/link";
+import { useState } from "react";
+
 import styles from "../styles/Header.module.css";
 
 export default function Header() {
+  const [ websiteURL ] = useState("https://not-boring-ds-names.vercel.app");
+  const [ tweet ] = useState("I just generated a name for my design system with this new cool site by @specifyapp💜%0A%0ACheck it out: " + websiteURL);
+
   return (
     <header className={styles.header}>
       <div className={styles.title}>
@@ -19,7 +24,7 @@ export default function Header() {
           <Link href="/about" className="body-2-m text-medium-emphasis">About</Link>
         </li>
         <li className={styles.listItem}>
-          <Link href="/" className="body-2-m text-medium-emphasis">Share</Link>
+          <Link href={"https://twitter.com/intent/tweet?text=" + tweet} className="body-2-m text-medium-emphasis">Share</Link>
         </li>
       </ul>
     </header>
