@@ -34,6 +34,10 @@ a {
   --buttonPrimaryBackgroundHover: #4938C3;
   --buttonPrimaryBackgroundActive: #8A78EE;
   --buttonPrimaryBorderDefault: #4938C3;
+  --buttonSecondaryBackgroundDefault: #FFFFFF;
+  --buttonSecondaryBackgroundHover: #F6F8FB;
+  --buttonSecondaryBackgroundActive: #FFFFFF;
+  --buttonSecondaryBorderDefault: #DEE4ED;
   --specifyLogo: url("/images/specify-logo-light.svg");
   --specifyLogoFlower: url("/images/specify-logo-flower-light.svg");
   --openaiLogo: url("/images/openai-logo-light.svg");
@@ -65,7 +69,10 @@ a {
     --buttonPrimaryBackgroundDefault: #624DE3;
     --buttonPrimaryBackgroundHover: #9A90DF;
     --buttonPrimaryBackgroundActive: #5443BC;
-    --buttonPrimaryBorderDefault: #5443BC;
+    --buttonPrimaryBorderDefault: #5443BC;--buttonSecondaryBackgroundDefault: #624DE3;
+    --buttonSecondaryBackgroundHover: #4938C3;
+    --buttonSecondaryBackgroundActive: #8A78EE;
+    --buttonSecondaryBorderDefault: #4938C3;
     --specifyLogo: url("/images/specify-logo-dark.svg");
     --specifyLogoFlower: url("/images/specify-logo-flower-dark.svg");
     --openaiLogo: url("/images/openai-logo-dark.svg");
@@ -128,7 +135,6 @@ main.loading {
 }
 
 .text-disabled {
-  /* color: rgba(var(--textLowEmphasis), 0.4); */
   opacity: 0.4;
 }
 
@@ -185,23 +191,33 @@ main.loading {
   font-weight: 400;
 }
 
-.button-primary {
+.button {
   display: inline-flex;
   justify-content: center;
-  padding: 10px 12px;
-  color: var(--textOnColoredBackground);
   font-size: 14px;
-  font-weight: 700;
   line-height: 20px;
-  background-color: var(--buttonPrimaryBackgroundDefault);
   border-radius: 6px;
-  border: 1px solid var(--buttonPrimaryBorderDefault);
-  cursor: pointer;
   transition: background-color 100ms ease-out;
 }
 
-.button-primary svg {
+.button-large {
+  padding: 10px 12px;
+  font-weight: 600;
+}
+
+.button-medium {
+  padding: 6px 12px;
+  font-weight: 500;
+}
+
+.button svg {
   margin-left: 8px;
+}
+
+.button-primary {
+  color: var(--textOnColoredBackground);
+  background-color: var(--buttonPrimaryBackgroundDefault);
+  border: 1px solid var(--buttonPrimaryBorderDefault);
 }
 
 .button-primary:hover {
@@ -219,4 +235,18 @@ main.loading {
 
 .button-primary:disabled:hover {
   background-color: var(--buttonPrimaryBackgroundDefault);
+}
+
+.button-secondary {
+  color: var(--textHighEmphasis);
+  background-color: var(--buttonSecondaryBackgroundDefault);
+  border: 1px solid var(--buttonSecondaryBorderDefault);
+}
+
+.button-secondary:hover {
+  background-color: var(--buttonSecondaryBackgroundHover);
+}
+
+.button-secondary:active {
+  background-color: var(--buttonSecondaryBackgroundActive);
 }

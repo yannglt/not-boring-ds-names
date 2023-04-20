@@ -77,6 +77,12 @@ export default function About() {
                   <p className="body-2-l text-low-emphasis">About Specify</p>
                   <div className={about.logo}></div>
                   <p className="body-2-s text-medium-emphasis">Specify is a design system infrastructure for modern teams. With Specify, product teams release better experiences faster while staying in-line with their company standards.</p>
+                  <Link className="button button-medium button-secondary" href="https://specifyapp.com">Learn more
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.3 3.75146C11.3 4.16568 11.6358 4.50146 12.05 4.50146H14.4393L8.46967 10.4711C8.17678 10.764 8.17678 11.2389 8.46967 11.5318C8.76256 11.8247 9.23744 11.8247 9.53033 11.5318L15.5 5.56213V7.95146C15.5 8.36568 15.8358 8.70146 16.25 8.70146C16.6642 8.70146 17 8.36568 17 7.95146V3.75146C17 3.33725 16.6642 3.00146 16.25 3.00146H12.05C11.6358 3.00146 11.3 3.33725 11.3 3.75146Z" fill="#788BA5"/>
+                      <path d="M5.75 5.25146C4.23122 5.25146 3 6.48268 3 8.00146V14.2515C3 15.7702 4.23122 17.0015 5.75 17.0015H12.25C13.7688 17.0015 15 15.7702 15 14.2515V11.0015C15 10.5873 14.6642 10.2515 14.25 10.2515C13.8358 10.2515 13.5 10.5873 13.5 11.0015V14.2515C13.5 14.9418 12.9404 15.5015 12.25 15.5015H5.75C5.05964 15.5015 4.5 14.9418 4.5 14.2515V8.00146C4.5 7.31111 5.05964 6.75146 5.75 6.75146H9C9.41421 6.75146 9.75 6.41568 9.75 6.00146C9.75 5.58725 9.41421 5.25146 9 5.25146H5.75Z" fill="#788BA5"/>
+                    </svg>
+                  </Link>
                 </div>
               </div>
             </div>

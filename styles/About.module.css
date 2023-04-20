@@ -74,6 +74,10 @@
   border-bottom: 1px solid var(--borderLowEmphasis);
 }
 
+.information:last-child {
+  padding-bottom: 24px;
+}
+
 .makers {
   display: flex;
   flex-direction: column;
