@@ -25,7 +25,7 @@ export default function Header() {
           <Link href="/about" className="body-2-m text-medium-emphasis">About</Link>
         </li>
         <li className={styles.listItem}>
-          <Link href={"https://twitter.com/intent/tweet?text=" + tweet} className="body-2-m text-medium-emphasis">Share</Link>
+          <Link href={"https://twitter.com/intent/tweet?text=" + tweet} className="body-2-m text-medium-emphasis" target="_blank">Share</Link>
         </li>
       </ul>
     </header>
