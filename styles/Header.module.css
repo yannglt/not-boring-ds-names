@@ -79,3 +79,9 @@
   padding: 12px 0;
   width: 100%;
 }
+
+@media (min-width: 896px) {
+  .listItem a {
+      padding: 24px 0;
+    }
+}
