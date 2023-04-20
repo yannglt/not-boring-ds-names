@@ -1,25 +1,57 @@
 .hero {
-  margin: 96px 0;
+  margin: 48px 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 896px) {
+  .hero {
+    margin: 96px 0 64px;
+  }
 }
 
 .content {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 24px;
-  margin-bottom: 96px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 24px;
+    margin-bottom: 96px;
+  }
 }
 
 .icon {
   display: inline-flex;
-  margin: 0 12px;
-  width: 64px;
-  height: 64px;
+  margin: 0 8px;
+  width: 36px;
+  height: 36px;
   border-radius: 6px;
   border: 0px solid transparent;
   transform: translateY(8px);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media (min-width: 414px) {
+  .icon {
+    width: calc(36px + 28 * ((100vw - 414px) / (896 - 414)));
+    height: calc(36px + 28 * ((100vw - 414px) / (896 - 414)));
+  }
+}
+
+@media (min-width: 896px) {
+  .icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 12px;
+  }
 }
 
 .icon.specify {
