@@ -111,7 +111,7 @@
     }
     }*/
 
-.list:not(.mobile):hover a:not(:hover) {
+.list:not(.menuExpanded):hover a:not(:hover) {
   color: var(--textLowEmphasis);
 }
 
