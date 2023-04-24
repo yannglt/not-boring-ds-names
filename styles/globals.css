@@ -96,6 +96,7 @@ body {
 }
 
 body.noScroll {
+  height: 100vh;
   overflow-y: hidden;
 }
 
