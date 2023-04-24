@@ -76,7 +76,6 @@
 
 .group input:focus, .group select:focus {
   border: 1px solid var(--borderActive);
-  /* box-shadow: 0 0 0 2px var(--borderFocus); */
   outline: var(--borderFocus) solid 2px;
 }
 

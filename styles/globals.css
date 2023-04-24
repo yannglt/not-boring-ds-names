@@ -245,6 +245,11 @@ main.loading {
   cursor: pointer;
 }
 
+.button:focus {
+  border: 1px solid var(--borderActive);
+  outline: var(--borderFocus) solid 2px;
+}
+
 .button-large {
   padding: 10px 12px;
   font-weight: 600;
