@@ -78,10 +78,15 @@
   display: inline-block;
   padding: 12px 0;
   width: 100%;
+  transition: color 100ms ease-in-out;
 }
 
 @media (min-width: 896px) {
   .listItem a {
       padding: 24px 0;
     }
+}
+
+.list:hover a:not(:hover) {
+  color: var(--textLowEmphasis);
 }
