@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.title}>
-        <h1 className="body-2-l text-high-emphasis">Not Boring Design System Names</h1>
+        <Link className="body-2-l text-high-emphasis" href="/">Not Boring Design System Names</Link>
         <div className={styles.author}>
           <p className="body-2-s text-medium-emphasis">by</p>
           <Link href="https://specifyapp.com" target="_blank">
