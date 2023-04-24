@@ -44,4 +44,9 @@
 
 .listItem svg path {
   fill: var(--iconDefault);
+  transition: fill 100ms ease-in-out;
+}
+
+.listItem svg:hover path {
+  fill: var(--iconHover);
 }

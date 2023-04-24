@@ -16,12 +16,26 @@
   padding: 16px 0;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
+  text-align: left;
   gap: 6px;
   flex-grow: 1;
-  border-bottom: 1px solid var(--borderLowEmphasis);
+}
+
+.menuTrigger {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 896px) {
+  .header:not(.menuExpanded) .menuTrigger {
+    display: none;
+  }
+}
+
+.menuTrigger svg path {
+  fill: var(--iconDefault);
 }
 
 .author {
@@ -45,9 +59,13 @@
 }
 
 @media (min-width: 896px) {
-  .title {
+  .header:not(.menuExpanded) .title {
     border-bottom: none;
     justify-content: flex-start;
+  }
+
+  .header.menuExpanded .title {
+    border-bottom: none;
   }
 }
 
@@ -63,10 +81,16 @@
 }
 
 .list {
-  display: flex;
+  display: none;
   flex-direction: row;
   text-align: center;
   gap: 24px;
+}
+
+@media (min-width: 896px) {
+  .list {
+    display: flex;
+  }
 }
 
 .listItem {
@@ -81,12 +105,63 @@
   transition: color 100ms ease-in-out;
 }
 
-@media (min-width: 896px) {
+/*@media (min-width: 896px) {
   .listItem a {
       padding: 24px 0;
     }
+    }*/
+
+.list:not(.mobile):hover a:not(:hover) {
+  color: var(--textLowEmphasis);
 }
 
-.list:hover a:not(:hover) {
-  color: var(--textLowEmphasis);
+.actions {
+  display: none;
+}
+
+.header.menuExpanded {
+
+  .menu {
+    position: fixed;
+    width: calc(100vw - 24px * 2);
+    min-height: calc(100vh - 57px - 24px - 24px);
+    top: 57px;
+    left: 0;
+    z-index: 99;
+    background-color: var(--backgroundSurface2);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /*.list, .actions {
+    max-width: 1128px;
+    }*/
+
+  .list {
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .listItem {
+    flex-grow: 0;
+    border-bottom: 1px solid var(--borderLowEmphasis);
+  }
+
+  .listItem a {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-align: left;
+    padding: 24px 0;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 }

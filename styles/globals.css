@@ -17,6 +17,7 @@ a {
   --textOnColoredBackground: #FFFFFF;
   --textInfo: #117DF9;
   --iconDefault: #788BA5;
+  --iconHover: #323B48;
   --iconOnColoredBackground: #FFFFFF;
   --backgroundSurface1: #FFFFFF;
   --backgroundSurface2: #F6F8FB;
@@ -52,6 +53,7 @@ a {
     --textOnColoredBackground: #FFFFFF;
     --textInfo: #60A8FA;
     --iconDefault: #787E87;
+    --iconHover: #F4F5F5;
     --iconOnColoredBackground: #FFFFFF;
     --backgroundComponentParent: #27282B;
     --backgroundComponentChild: #313235;
