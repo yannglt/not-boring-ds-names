@@ -95,6 +95,10 @@ body {
   background-color: var(--backgroundSurface1);
 }
 
+body.noScroll {
+  overflow-y: hidden;
+}
+
 html::before {
   content: '';
   position: absolute;

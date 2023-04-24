@@ -9,7 +9,7 @@ export default function Header() {
 
   const handleToggle = () => {
     setMenu((menu) => !menu);
-    console.log("wza");
+    document.body.classList.toggle("noScroll");
   };
 
   const name = useSelector((state: { name: { name: string } }) => state.name.name);
