@@ -87,8 +87,11 @@ body {
   margin: 0 auto;
   padding: 0 24px;
   max-width: 1128px;
-
   font-family: 'Inter', sans-serif;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: none;
+  -webkit-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
 
   background-color: var(--backgroundSurface1);
 }
