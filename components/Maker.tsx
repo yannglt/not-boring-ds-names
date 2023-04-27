@@ -12,7 +12,7 @@ interface MakerProps {
 
 export default function Maker({ name, role, path, link }: MakerProps) {
   return (
-    <div className={styles.maker}>
+    <Link className={styles.maker} href={link} target="_blank">
       <div className={styles.image}>
         <Image
           src={require(`../public/images/${path}`)}
@@ -22,9 +22,9 @@ export default function Maker({ name, role, path, link }: MakerProps) {
         />
       </div>
       <div className={styles.informations}>
-        <Link className="body-2-l text-high-emphasis" href={link}>{name}</Link>
-        <div className="body-2-s text-medium-emphasis">{role}</div>
+        <p className="body-2-l text-high-emphasis" >{name}</p>
+        <p className="body-2-s text-medium-emphasis">{role}</p>
       </div>
-    </div>
+    </Link>
   );
 }

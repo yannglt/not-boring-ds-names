@@ -56,10 +56,10 @@ export default function About() {
                 <div className={about.information}>
                   <p className="body-2-m text-low-emphasis">Makers</p>
                   <div className={about.makers}>
-                    <Maker name="Yann-Edern Gillet" role="Product Designer" link="" path="yann.jpg" />
-                    <Maker name="Mohamed Khalil Elloumi" role="Back-End Engineer" link="" path="khalil.jpg" />
-                    <Maker name="Maud Miguet" role="Product Manager" link="" path="maud.jpg" />
-                    <Maker name="Alexis Bonnefon" role="People Manager" link="" path="alexis.jpg" />
+                    <Maker name="Yann-Edern Gillet" role="Product Designer" link="https://twitter.com/yannglt" path="yann.jpg" />
+                    <Maker name="Mohamed Khalil Elloumi" role="Back-End Engineer" link="https://twitter.com/MKelloumi" path="khalil.jpg" />
+                    <Maker name="Maud Miguet" role="Product Manager" link="https://twitter.com/maudmiguet" path="maud.jpg" />
+                    <Maker name="Alexis Bonnefon" role="People Manager" link="https://www.linkedin.com/in/alexisbonnefon/" path="alexis.jpg" />
                   </div>
                 </div>
                 <div className={about.information}>
