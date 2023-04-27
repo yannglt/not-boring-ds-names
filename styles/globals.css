@@ -89,16 +89,14 @@ body {
   max-width: 1128px;
 
   font-family: 'Inter', sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 
   background-color: var(--backgroundSurface1);
 }
 
-body.noScroll {
+/* body.noScroll {
   height: 100vh;
   overflow-y: hidden;
-}
+} */
 
 html::before {
   content: '';
