@@ -21,7 +21,8 @@ a {
   --iconOnColoredBackground: #FFFFFF;
   --backgroundSurface1: #FFFFFF;
   --backgroundSurface2: #F6F8FB;
-  --backgroundComponentParent: #FFFFFF;--backgroundComponentChild: #F6F8FB;
+  --backgroundComponentParent: #FFFFFF;
+  --backgroundComponentChild: #F6F8FB;
   --backgroundComponentHighlight: #E7E4FB;
   --backgroundComponentInfo: #DBECFE;
   --backgroundComponentError: #FEE4E2;
