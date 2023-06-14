@@ -27,7 +27,7 @@ export default function About() {
               <div className={about.story}>
                 <div className={about.storyPart}>
                   <h2 className="body-2-m text-low-emphasis">Initial inspiration</h2>
-                  <p className="body-1-s text-medium-emphasis">During our 2023 Winter Retreat in January, during our hackathon day, we think about how AGI can help teams working with/on design systems. A lot of topics were mentioned, and we thought about <Link className="text-info" href="https://designtitles.com/" target="_blank">Design Titles ↗︎</Link>, a playful website created by Xtian Miller and Boris Crowther where you can generate job names for designers.</p>
+                  <p className="body-1-s text-medium-emphasis">At our 2023 Winter Retreat in January, we discussed how AGI can assist teams using design systems during our hackathon day. A lot of topics were mentioned, and we thought about <Link className="text-info" href="https://designtitles.com/" target="_blank">Design Titles ↗︎</Link>, a playful website created by Xtian Miller and Boris Crowther where you can generate job names for designers.</p>
                   <p className="body-1-s text-medium-emphasis">We loved this idea of generating names, and we know from experience naming stuff, whether we talk about tokens, components, or even worse — your layers, can sometimes be tricky. So we chose to build a tool that provides ideas for teams looking for a name for their design systems.</p>
                 </div>
                 <div className={about.storyPart}>
@@ -82,7 +82,7 @@ export default function About() {
                 <div className={about.information}>
                   <p className="body-2-m text-low-emphasis">About Specify</p>
                   <div className={about.logo}></div>
-                  <p className="body-2-s text-medium-emphasis">Specify is a design system infrastructure for modern teams. With Specify, product teams release better experiences faster while staying in-line with their company standards.</p>
+                  <p className="body-2-s text-medium-emphasis">Specify automate the distribution of your design tokens and enhance your design system by creating your own source of truth, improve collaboration between design and development and reduce manual work.</p>
                   <Link className="button button-medium button-secondary" href="https://specifyapp.com" target="_blank">Learn more
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M11.3 3.75146C11.3 4.16568 11.6358 4.50146 12.05 4.50146H14.4393L8.46967 10.4711C8.17678 10.764 8.17678 11.2389 8.46967 11.5318C8.76256 11.8247 9.23744 11.8247 9.53033 11.5318L15.5 5.56213V7.95146C15.5 8.36568 15.8358 8.70146 16.25 8.70146C16.6642 8.70146 17 8.36568 17 7.95146V3.75146C17 3.33725 16.6642 3.00146 16.25 3.00146H12.05C11.6358 3.00146 11.3 3.33725 11.3 3.75146Z" />

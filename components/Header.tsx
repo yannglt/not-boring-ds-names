@@ -20,12 +20,12 @@ export default function Header() {
     <header className={`${styles.header} ${menu ? styles.menuExpanded : ''}`}>
       <div className={styles.title}>
         <Link className="body-2-l text-high-emphasis" href="/">Not Boring Design System Names</Link>
-        {/* <div className={styles.author}>
+        <div className={styles.author}>
           <p className="body-2-s text-medium-emphasis">by</p>
           <Link href="https://specifyapp.com" target="_blank">
             <div className={styles.logo}></div>
           </Link>
-        </div> */}
+        </div>
         <div className={styles.menuTrigger} onClick={handleToggle}>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clip-rule="evenodd" d="M3 5.00132C3 4.58711 3.33579 4.25132 3.75 4.25132H16.25C16.6642 4.25132 17 4.58711 17 5.00132C17 5.41554 16.6642 5.75132 16.25 5.75132H3.75C3.33579 5.75132 3 5.41554 3 5.00132ZM3 10.0013C3 9.58711 3.33579 9.25132 3.75 9.25132H16.25C16.6642 9.25132 17 9.58711 17 10.0013C17 10.4155 16.6642 10.7513 16.25 10.7513H3.75C3.33579 10.7513 3 10.4155 3 10.0013ZM3 15.0013C3 14.5871 3.33579 14.2513 3.75 14.2513H16.25C16.6642 14.2513 17 14.5871 17 15.0013C17 15.4155 16.6642 15.7513 16.25 15.7513H3.75C3.33579 15.7513 3 15.4155 3 15.0013Z" fill="#788BA5" />
