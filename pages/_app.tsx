@@ -12,8 +12,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <AnimatePresence mode="wait" initial={true} onExitComplete={() => window.scrollTo(0, 0)}>
         <Component {...pageProps} />
-        <Analytics />
       </AnimatePresence>
+      <Analytics />
     </Provider>
   )
 }
