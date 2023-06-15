@@ -160,7 +160,7 @@ export default function Home() {
 
                 {displayedExplanation && !loading
                   ? <p className="body-emphasis text-low-emphasis">{displayedExplanation}</p>
-                  : <p className="body-emphasis text-low-emphasis">You&apos;ll find the perfect description for your design system</p>
+                  : <p className="body-emphasis text-low-emphasis">Find here the perfect description for your design system</p>
                 }
               </div>
             </motion.div>
