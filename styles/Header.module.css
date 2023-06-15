@@ -1,15 +1,38 @@
 .header {
+  height: 68px;
+  overflow: hidden;
+}
+
+.header.expanded {
+  height: 100vh;
+  background-color: var(--backgroundSurface1);
+}
+
+/* .header.expanded .menu {
+  background-color: rgba(255, 0, 0, 0.2);
+} */
+
+.headerContainer {
+  height: calc(100% - 1px);
   display: flex;
   flex-direction: column;
-  width: 100%;
+  margin: 0 24px;
   border-bottom: 1px solid var(--borderLowEmphasis);
+
+  /* background-color: rgba(255, 0, 0, 0.2); */
 }
 
 @media (min-width: 896px) {
-  .header {
-    flex-direction: row;
-    align-items: center;
+  .headerContainer {
+    margin: 0 48px;
   }
+}
+
+.fixedPart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {
@@ -23,52 +46,6 @@
   flex-grow: 1;
 }
 
-.menuTrigger {
-  width: 20px;
-  height: 20px;
-}
-
-@media (min-width: 896px) {
-  .header:not(.menuExpanded) .menuTrigger {
-    display: none;
-  }
-}
-
-.menuTrigger svg path {
-  fill: var(--iconDefault);
-}
-
-.author {
-  display: none;
-}
-
-@media (min-width: 414px) {
-  .author {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 6px;
-  }
-}
-
-@media (min-width: 512px) {
-  .title {
-    flex-direction: row;
-    text-align: center;
-  }
-}
-
-@media (min-width: 896px) {
-  .header:not(.menuExpanded) .title {
-    border-bottom: none;
-    justify-content: flex-start;
-  }
-
-  .header.menuExpanded .title {
-    border-bottom: none;
-  }
-}
-
 .logo {
   width: 84px;
   height: 24px;
@@ -80,17 +57,29 @@
   transform: translateY(1px);
 }
 
-.list {
-  display: none;
-  flex-direction: row;
-  text-align: center;
-  gap: 24px;
+.links {
+  display: none; 
+}
+
+.menuTrigger {
+  display: auto;
 }
 
 @media (min-width: 896px) {
-  .list {
+  .links {
     display: flex;
   }
+
+  .menuTrigger {
+    display: none;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 24px;
 }
 
 .listItem {
@@ -105,49 +94,46 @@
   transition: color 100ms ease-in-out;
 }
 
-/*@media (min-width: 896px) {
-  .listItem a {
-      padding: 24px 0;
-    }
-    }*/
-
-.list:not(.menuExpanded):hover a:not(:hover) {
+.list:not(.header.expanded):hover a:not(:hover) {
   color: var(--textLowEmphasis);
 }
 
-.actions {
-  display: none;
+.menuTrigger {
+  width: 20px;
+  height: 20px;
 }
 
-.header.menuExpanded .menu {
-  position: fixed;
-  width: calc(100vw - 24px * 2);
-  min-height: calc(100vh - 68px - 24px - 24px);
+.menuTrigger svg path {
+  fill: var(--iconDefault);
+}
+
+.menu {
+  /* width: calc(100vw - 24px * 2); */
+  /* min-height: calc(100vh - 68px - 24px - 24px); */
   /* 68px = header height, 24px = padding */
-  top: calc(68px + 48px - 40px - 7px);
+  /* top: calc(68px + 48px - 40px - 7px); */
   /* 68px = header height, 48px = wanted padding, 40px = line-height of heading-1, 7px = centering of heading-1 and icon */
   /* Goal was to align first nav item and heading-1 hero */
-  left: 0;
   z-index: 99;
-  background-color: var(--backgroundSurface2);
-  padding: 24px;
+  /* background-color: var(--backgroundSurface2); */
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 56px;
 }
 
-.header.menuExpanded .list {
+.menu .list {
   gap: 0px;
   display: flex;
   flex-direction: column;
+  transform: translateY(24px);
 }
 
-.header.menuExpanded .listItem {
+.menu .listItem {
   flex-grow: 0;
   border-bottom: 1px solid var(--borderLowEmphasis);
 }
 
-.header.menuExpanded .listItem a {
+.menu .listItem a {
   font-size: 32px;
   line-height: 40px;
   font-weight: 800;
@@ -156,7 +142,7 @@
   padding: 24px 0;
 }
 
-.header.menuExpanded .actions {
+.menu .actions {
   display: flex;
   flex-direction: column;
   gap: 16px;
