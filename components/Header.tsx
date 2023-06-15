@@ -32,13 +32,13 @@ export default function Header() {
             <div className={styles.links}>
               <ul className={styles.list}>
                 <li className={styles.listItem}>
-                  <Link href="/" className="body-2-m text-medium-emphasis" onClick={handleToggle}>Index</Link>
+                  <Link href="/" className="body-2-m text-medium-emphasis">Index</Link>
                 </li>
                 <li className={styles.listItem}>
-                  <Link href="/about" className="body-2-m text-medium-emphasis" onClick={handleToggle}>About</Link>
+                  <Link href="/about" className="body-2-m text-medium-emphasis">About</Link>
                 </li>
                 <li className={styles.listItem}>
-                  <Link href={"https://twitter.com/intent/tweet?text=" + tweet} className="body-2-m text-medium-emphasis" target="_blank" onClick={handleToggle}>Share</Link>
+                  <Link href={"https://twitter.com/intent/tweet?text=" + tweet} className="body-2-m text-medium-emphasis" target="_blank">Share</Link>
                 </li>
               </ul>
             </div>
