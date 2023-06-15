@@ -5,7 +5,7 @@ export default function Document() {
     title: "Not Boring Design System Names by Specify",
     description: "Your design system is the backbone of your brand's visual identity, but a great name can take it to the next level. With the power of GPT-3, we'll help you generate a name that captures your brand's unique characteristics, industry, and personality.",
     url: "",
-    image: "",
+    image: "/og-image.jpg",
   }
 
   return (
