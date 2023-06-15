@@ -25,7 +25,9 @@ export default function Header() {
             <Link className="body-2-l text-high-emphasis" href="/">
               Not Boring Design System Names
             </Link>
-            <div className={styles.author}></div>
+            <Link href="https://specifyapp.com" target="_blank">
+              <div className={styles.logo}></div>
+            </Link>
           </div>
             <div className={styles.links}>
               <ul className={styles.list}>
