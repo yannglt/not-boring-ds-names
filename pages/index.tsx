@@ -140,7 +140,7 @@ export default function Home() {
                     <option value="sport">Sport</option>
                     <option value="technology">Technology</option>
                     <option value="telecommunications">Telecommunications</option>
-                    <option value="transportation">Transportation</option>
+                    <option value="transportation" selected>Transportation</option>
                     <option value="travel">Travel</option>
                     <option value="utilities">Utilities</option>
                   </select>
