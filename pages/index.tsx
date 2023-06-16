@@ -121,7 +121,7 @@ export default function Home() {
                 </div>
                 <div className={form.group}>
                   <label htmlFor="space" className="body-2-l text-high-emphasis">Space</label>
-                  <select name="space" id="space" className="body-2-m text-medium-emphasis" onChange={(event) => setSpace(event.target.value)}>
+                  <select name="space" id="space" className="body-2-m text-medium-emphasis" onChange={(event) => setSpace(event.target.value)} defaultValue="transportation">
                     <option value="automotive">Automotive</option>
                     <option value="banking">Banking</option>
                     <option value="construction">Construction</option>
@@ -140,7 +140,7 @@ export default function Home() {
                     <option value="sport">Sport</option>
                     <option value="technology">Technology</option>
                     <option value="telecommunications">Telecommunications</option>
-                    <option value="transportation" selected>Transportation</option>
+                    <option value="transportation">Transportation</option>
                     <option value="travel">Travel</option>
                     <option value="utilities">Utilities</option>
                   </select>
